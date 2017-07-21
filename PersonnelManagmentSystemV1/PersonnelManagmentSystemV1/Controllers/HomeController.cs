@@ -8,6 +8,7 @@ namespace PersonnelManagmentSystemV1.Controllers
 {
     public class HomeController : Controller
     {
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View();

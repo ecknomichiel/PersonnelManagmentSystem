@@ -29,5 +29,7 @@ namespace PersonnelManagmentSystemV1.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<PersonnelManagmentSystemV1.Models.Job> Jobs { get; set; }
     }
 }
