@@ -62,7 +62,7 @@ namespace PersonnelManagmentSystemV1.Migrations
                 var store = new RoleStore<IdentityRole>(context);
                 var roleManager = new RoleManager<IdentityRole>(store);
 
-                roleManager.Create(new IdentityRole("Search"));
+                roleManager.Create(new IdentityRole("Searcher"));
             }
             #endregion
 
