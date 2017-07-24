@@ -160,7 +160,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\JobsController.cs" />
+    <Compile Include="Controllers\JobOpeningsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DataAccess\ApplicationDbContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -178,7 +178,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Job.cs" />
+    <Compile Include="Models\JobOpening.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\TextFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

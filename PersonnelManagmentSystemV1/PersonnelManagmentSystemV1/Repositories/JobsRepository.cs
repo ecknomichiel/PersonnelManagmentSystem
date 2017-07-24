@@ -12,29 +12,29 @@ namespace PersonnelManagmentSystemV1.Repositories
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        public IEnumerable<Job> Jobs()
+        public IEnumerable<JobOpening> Jobs()
         {
             return db.Jobs;
         }
 
-        public Job Job(int? id)
+        public JobOpening Job(int? id)
         {
             return db.Jobs.Where(j => j.ID == id).First();
         }
 
-        public void Add(Job job)
+        public void Add(JobOpening job)
         {
             db.Jobs.Add(job);
             db.SaveChanges();
         }
 
-        public void Edit(Job job)
+        public void Edit(JobOpening job)
         {
             db.Entry(job).State = EntityState.Modified;
             db.SaveChanges();
         }
 
-        public void Remove(Job job)
+        public void Remove(JobOpening job)
         {
             db.Jobs.Remove(job);
             db.SaveChanges();

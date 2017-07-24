@@ -12,7 +12,7 @@ using PersonnelManagmentSystemV1.Repositories;
 namespace PersonnelManagmentSystemV1.Controllers
 {
     [Authorize(Roles = "Admin, Boss")]
-    public class JobsController : Controller
+    public class JobOpeningsController : Controller
     {
         private JobsRepository db = new JobsRepository();
 
@@ -30,7 +30,7 @@ namespace PersonnelManagmentSystemV1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Job job = db.Job(id);
+            JobOpening job = db.Job(id);
             if (job == null)
             {
                 return HttpNotFound();
@@ -49,7 +49,7 @@ namespace PersonnelManagmentSystemV1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,Description,CompName")] Job job)
+        public ActionResult Create([Bind(Include = "ID,Title,Description,CompName")] JobOpening job)
         {
             if (ModelState.IsValid)
             {
@@ -67,7 +67,7 @@ namespace PersonnelManagmentSystemV1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Job job = db.Job(id);
+            JobOpening job = db.Job(id);
             if (job == null)
             {
                 return HttpNotFound();
@@ -80,7 +80,7 @@ namespace PersonnelManagmentSystemV1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Title,Description,CompName")] Job job)
+        public ActionResult Edit([Bind(Include = "ID,Title,Description,CompName")] JobOpening job)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace PersonnelManagmentSystemV1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Job job = db.Job(id);
+            JobOpening job = db.Job(id);
             if (job == null)
             {
                 return HttpNotFound();
@@ -110,7 +110,7 @@ namespace PersonnelManagmentSystemV1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Job job = db.Job(id);
+            JobOpening job = db.Job(id);
             db.Remove(job);
             return RedirectToAction("Index");
         }

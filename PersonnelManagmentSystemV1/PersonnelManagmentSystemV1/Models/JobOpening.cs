@@ -6,7 +6,7 @@ using System.Web;
 
 namespace PersonnelManagmentSystemV1.Models
 {
-    public class Job
+    public class JobOpening
     {
         [Key]
         public int ID { get; set; }
@@ -18,11 +18,5 @@ namespace PersonnelManagmentSystemV1.Models
         [Required]
         [Display(Name = "Job description")]
         public string Description { get; set; }
-
-        [Required]
-        [Display(Name = "Company Name")]
-        public string CompName { get; set; }
-
-        public virtual ICollection<ApplicationUser> Applicants { get; set; }
     }
 }
