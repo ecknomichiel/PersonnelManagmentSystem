@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using PersonnelManagmentSystemV1.DataAccess;
 
 namespace PersonnelManagmentSystemV1.Repositories
 {

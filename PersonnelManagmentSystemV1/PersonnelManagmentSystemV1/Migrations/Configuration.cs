@@ -7,15 +7,16 @@ namespace PersonnelManagmentSystemV1.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using PersonnelManagmentSystemV1.DataAccess;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<PersonnelManagmentSystemV1.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(PersonnelManagmentSystemV1.Models.ApplicationDbContext context)
+        protected override void Seed(ApplicationDbContext context)
         {
             #region ExampleSeed
             //  This method will be called after migrating to the latest version.
