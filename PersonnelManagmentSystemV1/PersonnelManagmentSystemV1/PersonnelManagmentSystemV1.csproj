@@ -178,6 +178,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Information.cs" />
     <Compile Include="Models\JobOpening.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\TextFile.cs" />

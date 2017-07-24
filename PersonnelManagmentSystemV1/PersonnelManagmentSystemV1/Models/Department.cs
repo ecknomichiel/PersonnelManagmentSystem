@@ -13,9 +13,12 @@ namespace PersonnelManagmentSystemV1.Models
         
         [Required]
         [Display(Name = "Department Name")]
-        public string Title { get; set; }
+        public string Name { get; set; }
+        public ApplicationUser Manager { get; set; }
 
         public virtual ICollection<ApplicationUser> Employees { get; set; }
+        public virtual ICollection<JobOpening> JobOpenings { get; set; }
+        public virtual ICollection<Information> Informations { get; set; }
     }
 
 
