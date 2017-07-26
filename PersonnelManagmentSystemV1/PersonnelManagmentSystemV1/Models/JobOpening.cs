@@ -18,5 +18,11 @@ namespace PersonnelManagmentSystemV1.Models
         [Required]
         [Display(Name = "Job description")]
         public string Description { get; set; }
+
+        [Required]
+        [Display(Name = "Job Type")]
+        public string JobType { get; set; }
+
+        public virtual ICollection<ApplicationUser> Applicants { get; set; }
     }
 }

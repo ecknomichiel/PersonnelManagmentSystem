@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -14,7 +15,10 @@ namespace PersonnelManagmentSystemV1.Models
         [Required]
         [Display(Name = "Department Name")]
         public string Name { get; set; }
-        public ApplicationUser Manager { get; set; }
+
+        [ForeignKey("Manager")]
+        public string ManagerID { get; set; }
+        public virtual ApplicationUser Manager { get; set; }
 
         public virtual ICollection<ApplicationUser> Employees { get; set; }
         public virtual ICollection<JobOpening> JobOpenings { get; set; }
