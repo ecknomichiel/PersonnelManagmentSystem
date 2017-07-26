@@ -16,8 +16,6 @@ namespace PersonnelSystem.Models
         [Display(Name = "Department Name")]
         public string Name { get; set; }
 
-        [ForeignKey("Manager")]
-        public string ManagerID { get; set; }
         public virtual ApplicationUser Manager { get; set; }
 
         public virtual ICollection<ApplicationUser> Employees { get; set; }
