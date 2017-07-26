@@ -6,9 +6,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using PersonnelManagmentSystemV1.Models;
+using PersonnelSystem.ViewModels;
 
-namespace PersonnelManagmentSystemV1.Controllers
+namespace PersonnelSystem.Controllers
 {
     [Authorize]
     public class ManageController : Controller

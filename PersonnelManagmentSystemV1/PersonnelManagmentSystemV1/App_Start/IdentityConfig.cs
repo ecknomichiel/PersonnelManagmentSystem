@@ -10,10 +10,10 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using PersonnelManagmentSystemV1.Models;
-using PersonnelManagmentSystemV1.DataAccess;
+using PersonnelSystem.Models;
+using PersonnelSystem.DataAccess;
 
-namespace PersonnelManagmentSystemV1
+namespace PersonnelSystem
 {
     public class EmailService : IIdentityMessageService
     {

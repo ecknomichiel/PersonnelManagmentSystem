@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using PersonnelManagmentSystemV1.Models;
+using PersonnelSystem.Models;
 
-namespace PersonnelManagmentSystemV1.DataAccess
+namespace PersonnelSystem.DataAccess
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -20,6 +20,6 @@ namespace PersonnelManagmentSystemV1.DataAccess
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<PersonnelManagmentSystemV1.Models.JobOpening> Jobs { get; set; }
+        public System.Data.Entity.DbSet<PersonnelSystem.Models.JobOpening> Jobs { get; set; }
     }
 }

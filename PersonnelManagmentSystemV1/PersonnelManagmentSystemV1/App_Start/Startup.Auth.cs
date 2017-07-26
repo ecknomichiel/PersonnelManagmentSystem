@@ -5,10 +5,10 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using PersonnelManagmentSystemV1.DataAccess;
-using PersonnelManagmentSystemV1.Models;
+using PersonnelSystem.DataAccess;
+using PersonnelSystem.Models;
 
-namespace PersonnelManagmentSystemV1
+namespace PersonnelSystem
 {
     public partial class Startup
     {
